@@ -139,8 +139,7 @@ def formatQA(cid, mid, fact, tags, cm, deck):
     for (k, v) in fact.items():
         fields["text:"+k] = stripHTML(v[1])
         if v[1]:
-            fields[k] = '<span class="fm%s">%s</span>' % (
-                hexifyID(v[0]), v[1])
+            fields[k] = v[1]
         else:
             fields[k] = u""
     fields['tags'] = tags[0]
